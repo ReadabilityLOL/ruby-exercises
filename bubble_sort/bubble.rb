@@ -1,5 +1,5 @@
 #takes a list and returns a sorted version of it
-def bubble_sort(list)
+def bubble_sort(list, direction = "forwards")
   sorted = []
   while sorted != list do
     list.each_with_index do |item,index|
@@ -14,5 +14,5 @@ def bubble_sort(list)
       end
     end
   end
-  sorted.reverse
+  direction == "forwards" ? sorted.reverse : sorted
 end
